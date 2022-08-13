@@ -1,5 +1,6 @@
-//import 'package:consest/sample.dart';
 import 'package:flutter/material.dart';
+
+import 'PlayFont.dart';
 
 void main() => runApp(const MyApp());
 
@@ -43,8 +44,10 @@ class _SplashScreenState extends State<SplashScreen> {
               margin: const EdgeInsets.all(7),
               child: ElevatedButton.icon(
                 onPressed: () {
-                  //  Navigator.push(context,
-                  //      MaterialPageRoute(builder: (context) => const Sample()));
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const PlayFont.PlayFont()));
                 },
                 label: const Text('PLAYFAIR CIPHER',
                     style: TextStyle(fontSize: 20)),
