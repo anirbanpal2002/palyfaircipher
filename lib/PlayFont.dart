@@ -25,7 +25,7 @@ class _PlayFontState extends State<PlayFont> {
         backgroundColor: Colors.deepPurpleAccent,
         title: const Center(
             child: Text(
-          'SAMPLE',
+          'PLAYFAIRCIPHER',
           style: TextStyle(
             fontSize: 30,
             color: Colors.white,
@@ -117,7 +117,7 @@ class _PlayFontState extends State<PlayFont> {
                         setState(() {
                           encryptedText = encryptByPlayfairCipher(
                               myController.value.text,
-                              String.parse(myController1.value.text));
+                              (myController1.value.text.toString()));
                         });
                       },
                       child: const Text(
