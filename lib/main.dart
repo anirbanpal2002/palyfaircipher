@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-
+import 'package:palyfaircipher/Caesar.dart';
 import 'PlayFont.dart';
+import 'CaesarFont.dart';
 
 void main() => runApp(const MyApp());
 
@@ -64,10 +65,10 @@ class _SplashScreenState extends State<SplashScreen> {
                 margin: const EdgeInsets.all(7),
                 child: ElevatedButton.icon(
                   onPressed: () {
-                    // Navigator.push(
-                    //     context,
-                    //     MaterialPageRoute(
-                    //         builder: (context) => const ));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const CaesarFont()));
                   },
                   label: const Text('CAESAR CIPHER',
                       style: TextStyle(fontSize: 20)),

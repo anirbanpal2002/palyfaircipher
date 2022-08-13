@@ -1,17 +1,16 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'Caesar.dart';
 
-import 'PlayFair.dart';
-
-class PlayFont extends StatefulWidget {
-  const PlayFont.PlayFont({Key? key}) : super(key: key);
+class CaesarFont extends StatefulWidget {
+  const CaesarFont({Key? key}) : super(key: key);
 
   @override
-  State<PlayFont> createState() => _PlayFontState();
+  State<CaesarFont> createState() => _CaesarFontState();
 }
 
-class _PlayFontState extends State<PlayFont> {
+class _CaesarFontState extends State<CaesarFont> with Ceaser {
   TextEditingController myController = TextEditingController();
   TextEditingController myController1 = TextEditingController();
   //TextEditingController myController2 = TextEditingController();
@@ -25,7 +24,7 @@ class _PlayFontState extends State<PlayFont> {
         backgroundColor: Colors.deepPurpleAccent,
         title: const Center(
             child: Text(
-          'PLAYFAIR CIPHER',
+          'CAESAR CIPHER',
           style: TextStyle(
             fontSize: 30,
             color: Colors.white,
@@ -39,9 +38,9 @@ class _PlayFontState extends State<PlayFont> {
         onTap: (index) {
           if (index == 1) {
             Navigator.push(
-                context,
-                MaterialPageRoute(
-                    builder: (context) => const PlayFont.PlayFont()));
+             context,
+             MaterialPageRoute(
+                 builder: (context) => const PlayFont.PlayFont()));
           }
         },
         items: const [
@@ -115,9 +114,8 @@ class _PlayFontState extends State<PlayFont> {
                           padding: const EdgeInsets.all(20)),
                       onPressed: () {
                         setState(() {
-                          encryptedText = encryptByPlayfairCipher(
-                              myController.value.text,
-                              (myController1.value.text.toString()));
+                          encryptedText = encryption(myController.value.text,
+                              int.parse(myController1.value.text));
                         });
                       },
                       child: const Text(
