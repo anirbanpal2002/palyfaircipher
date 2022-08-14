@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 import 'PlayFair.dart';
 
@@ -14,8 +13,9 @@ class PlayFont extends StatefulWidget {
 class _PlayFontState extends State<PlayFont> {
   TextEditingController myController = TextEditingController();
   TextEditingController myController1 = TextEditingController();
+
   //TextEditingController myController2 = TextEditingController();
-  String? encryptedText = "";
+  String encryptedText = "";
 
   @override
   Widget build(BuildContext context) {
@@ -135,7 +135,7 @@ class _PlayFontState extends State<PlayFont> {
                       const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
                   child: Center(
                     child: Text(
-                      encryptedText!,
+                      encryptedText,
                       style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 25,
